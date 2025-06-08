@@ -28,11 +28,6 @@ contract ProxyScript is Script {
         console.log("Deployed at", deployed);
     }
 
-    function run() public {
-        bytes memory bytecode = type(IglooProxyFactory).creationCode;
-        console.logBytes(bytecode);
-    }
-
 }
 
 
