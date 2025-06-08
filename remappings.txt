@@ -1,0 +1,9 @@
+ds-test/=lib/forge-std/lib/ds-test/src/
+forge-std/=lib/forge-std/src/
+
+crysol/=lib/crysol/src/
+lib/crysol:src/=lib/crysol/src/
+lib/crysol:ds-test/=lib/crysol/lib/forge-std/lib/ds-test/src/
+lib/crysol:forge-std/=lib/crysol/lib/forge-std/src/
+
+@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/

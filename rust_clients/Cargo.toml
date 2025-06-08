@@ -1,0 +1,17 @@
+[package]
+name = "igloo"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+alloy = { version = "0.3.6", features = ["full", "signer-keystore"] }
+clap = {version = "4.5.38", features = ["cargo","env"] }
+tokio = { version = "1.45.0", features = ["full"] }
+eyre = "0.6.8"
+rand = "0.9.1"
+k256 = {version="0.13.1", features=["expose-field"]}
+rand_core = "0.6.4"
+elliptic-curve = "0.13.5"
+lazy_static = "1.5.0"
+log = "0.4"
+env_logger = "0.10"
