@@ -38,7 +38,7 @@ Currently this repo provides no functionality for signing messages. In the futur
 
 ## Deployment
 
-Igloo used a proxy patter for deployments to save on gas costs during deployment. In order to deploy a new instance a "factory" and "singleton" address must be provided. Existing addresses can be found in this README.
+Igloo used a proxy pattern for deployments to save on gas costs during deployment. In order to deploy a new instance a "factory" and "singleton" address must be provided. Existing addresses can be found in this README.
 
 
 A forge script is provided to deploy a new proxy instance of the Igloo contract. Before running the script export the following environment variables:
