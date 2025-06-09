@@ -77,3 +77,10 @@ TODO: Use Nicks methods for deployments.
     }
 }
 ```
+
+## TODO
+
+- [_] Update deprecation flag to add count, in order to keep track of how many participants have marked as deprecated.
+- [_] Optimise gas usage of main contract
+- [_] Complete main test suite
+- [_] Add message signing contract and client
