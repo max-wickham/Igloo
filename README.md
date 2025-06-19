@@ -2,7 +2,7 @@
 
 Igloo is an onchain implementation of the Frost signature key generation ceremony described in the paper "Frost: Flexible Round-Optimized Schnorr Threshold Signatures" by Ben-Sasson et al.
 
-Igloo allows for the key generation ceremony required for Frost to be performed onchain. As well as simplifying client implementations by performing certain checks in the contract, performing the ceremony on chain allows for easy retrial of the ceremony state at any time in a decentralized manner. This is particularly useful for Frost signatures as in order to participate in a signing ceremony the client must be able to access the state of the key generation ceremony. 
+Igloo allows for the key generation ceremony required for Frost to be performed onchain. As well as simplifying client implementations by performing certain checks in the contract, performing the ceremony on chain allows for easy retreval of the ceremony state at any time in a decentralized manner. This is particularly useful for Frost signatures as in order to participate in a signing ceremony the client must be able to access the state of the key generation ceremony. 
 
 ## Frost Keys
 
@@ -38,7 +38,7 @@ Currently this repo provides no functionality for signing messages. In the futur
 
 ## Deployment
 
-Igloo used a proxy patter for deployments to save on gas costs during deployment. In order to deploy a new instance a "factory" and "singleton" address must be provided. Existing addresses can be found in this README.
+Igloo used a proxy pattern for deployments to save on gas costs during deployment. In order to deploy a new instance a "factory" and "singleton" address must be provided. Existing addresses can be found in this README.
 
 
 A forge script is provided to deploy a new proxy instance of the Igloo contract. Before running the script export the following environment variables:
@@ -77,3 +77,10 @@ TODO: Use Nicks methods for deployments.
     }
 }
 ```
+
+## TODO
+
+- [_] Update deprecation flag to add count, in order to keep track of how many participants have marked as deprecated.
+- [_] Optimise gas usage of main contract
+- [_] Complete main test suite
+- [_] Add message signing contract and client
