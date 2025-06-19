@@ -1,6 +1,6 @@
 # Igloo
 
-Igloo is an onchain implementation of the Frost signature key generation ceremony described in the paper "Frost: Flexible Round-Optimized Schnorr Threshold Signatures" by Ben-Sasson et al.
+Igloo is an onchain implementation of the Frost signature key generation ceremony described in the paper "Frost: Flexible Round-Optimized Schnorr Threshold Signatures" by Chelsea Komlo and Ian Goldberg.
 
 Igloo allows for the key generation ceremony required for Frost to be performed onchain. As well as simplifying client implementations by performing certain checks in the contract, performing the ceremony on chain allows for easy retreval of the ceremony state at any time in a decentralized manner. This is particularly useful for Frost signatures as in order to participate in a signing ceremony the client must be able to access the state of the key generation ceremony. 
 
