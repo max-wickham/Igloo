@@ -78,13 +78,11 @@ contract Igloo is IIgloo {
     struct Session {
         // -- Starting state --
         SessionState round;
-        ParticipantState[] participantRounds;
         // -- Round 1 --
         Point[][] commitments; // (n x t) Commitments to polynomial coefficients.
         Sigma[] sigmas; // (n) Proof of knowledge of first coefficient.
-        Point[] sessionChannelKeys; // (n) Public channel encryption keys `(A = aG)`
+        Point[] sessionChannelKeys; // (n) Public channel encryption keys `(A = aG)`, `a` is kept secret by participant.
         uint commitmentsCount; // Number of participants who have submitted commitments.
-        // participants keep `a` secret and use it to decrypt received messages
         bool[] commitmentsSubmitted; // (n) Marked true if a participant has completed this stage.
         // -- Round 2 --
         FunctionOutput[][] encryptedFunctionOutputs; // (n x n) Encrypted function outputs,
@@ -92,8 +90,8 @@ contract Igloo is IIgloo {
         uint functionOutputCount;
         bool[] functionOutputsSubmitted; // (n) Marked true if a participant has completed this stage.
         // -- Round 3 --
-        bool[] validatedFunctionOutputs; // (n) Marked true if a participant has validated the receiving function outputs
         uint validationCount;
+        bool[] validatedFunctionOutputs; // (n) Marked true if a participant has validated the receiving function outputs
     }
 
     /// @dev The order of the secp256k1 curve.
